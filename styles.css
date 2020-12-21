@@ -67,3 +67,43 @@
     align-items: center;
     margin: 1.9rem 0 0 1.5rem;
 }
+
+.picker {
+    color: #b2a7a7;
+    font-weight: 700;
+}
+
+.toggle {
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    margin-left: auto;
+    background: white;
+    transition: background ease-in-out 0.3s 0;
+    cursor: pointer;
+    margin-right: 1.3rem;
+}
+
+.toggle:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2rem;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    top: -2px;
+    left: -2px;
+    transition: left ease-in-out .3s;
+}
+
+.toggle.on {
+    background: #5288f4;
+}
+
+.toggle.on:after {
+    background: white;
+    left: calc(100% - 2rem);
+}
